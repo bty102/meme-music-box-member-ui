@@ -18,8 +18,8 @@ import ReceiptIcon from "@mui/icons-material/Receipt";
 
 import PeopleIcon from "@mui/icons-material/People";
 import { useNavigate } from "react-router-dom";
-import EventAvailableIcon
-from "@mui/icons-material/EventAvailable";
+import EventAvailableIcon from "@mui/icons-material/EventAvailable";
+import Inventory2Icon from "@mui/icons-material/Inventory2";
 
 const drawerWidth = 260;
 
@@ -84,6 +84,13 @@ function Sidebar() {
           </ListItemIcon>
 
           <ListItemText primary="Bookings" />
+        </ListItemButton>
+        <ListItemButton onClick={() => navigate("/products")}>
+          <ListItemIcon>
+            <Inventory2Icon />
+          </ListItemIcon>
+
+          <ListItemText primary="Products" />
         </ListItemButton>
 
         {/* <ListItemButton>

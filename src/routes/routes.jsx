@@ -10,9 +10,11 @@ import InvoiceDetailPage from "../features/invoice/pages/InvoiceDetailPage"
 import BookingListPage from "../features/booking/pages/BookingListPage"
 import BookingDetailPage from "../features/booking/pages/BookingDetailPage"
 import ProductListPage from "../features/product/pages/ProductListPage"
+import RegisterPage from "../features/auth/pages/RegisterPage"
 
 const publicRoutes = [
     {path: '/login', page: LoginPage, layout: Fragment},
+    {path: '/register', page: RegisterPage, layout: Fragment},
 ]
 
 const privateRoutes = [
