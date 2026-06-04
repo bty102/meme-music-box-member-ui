@@ -126,6 +126,9 @@ function LoginPage() {
             <Button onClick={() => navigate("/register")}>
               Đăng ký tài khoản
             </Button>
+            <Button onClick={() => navigate("/forgot-password")}>
+              Quên mật khẩu
+            </Button>
           </Box>
         </CardContent>
       </Card>

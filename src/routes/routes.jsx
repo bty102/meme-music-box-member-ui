@@ -11,10 +11,14 @@ import BookingListPage from "../features/booking/pages/BookingListPage"
 import BookingDetailPage from "../features/booking/pages/BookingDetailPage"
 import ProductListPage from "../features/product/pages/ProductListPage"
 import RegisterPage from "../features/auth/pages/RegisterPage"
+import MemberProfileEditPage from "../features/member/pages/MemberProfileEditPage"
+import ChangePasswordPage from "../features/auth/pages/ChangePasswordPage"
+import ForgotPasswordPage from "../features/auth/pages/ForgotPasswordPage"
 
 const publicRoutes = [
     {path: '/login', page: LoginPage, layout: Fragment},
     {path: '/register', page: RegisterPage, layout: Fragment},
+    {path: '/forgot-password', page: ForgotPasswordPage, layout: Fragment},
 ]
 
 const privateRoutes = [
@@ -27,6 +31,8 @@ const privateRoutes = [
     {path: '/bookings', page: BookingListPage, layout: MainLayout},
     {path: '/bookings/detail/:bookingId', page: BookingDetailPage, layout: MainLayout},
     {path: '/products', page: ProductListPage, layout: MainLayout},
+    {path: '/me/edit-my-profile', page: MemberProfileEditPage, layout: MainLayout},
+    {path: '/me/change-password', page: ChangePasswordPage, layout: MainLayout},
 ]
 
 export { publicRoutes, privateRoutes }

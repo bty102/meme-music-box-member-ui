@@ -1,6 +1,8 @@
 import {
   Avatar,
   Box,
+  Button,
+  ButtonGroup,
   Card,
   CardContent,
   Chip,
@@ -15,8 +17,13 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { fetchMyInfo } from "../store/authThunk";
 import { formatDateTime } from "../../../util/formatDateTime";
+import { useNavigate } from "react-router-dom";
+import EditIcon from "@mui/icons-material/Edit";
+import LockIcon from "@mui/icons-material/Lock";
 
 function MyInfoPage() {
+  const navigate = useNavigate();
+
   const dispatch = useDispatch();
 
   const { user, loading } = useSelector((state) => state.auth);
@@ -241,6 +248,26 @@ function MyInfoPage() {
           </Grid>
         </CardContent>
       </Card>
+
+      <Box sx={{display: "flex", justifyContent: "flex-end", mt: 4}}>
+        <ButtonGroup variant="outlined" size="small" color="secondary">
+          <Button
+            size="small"
+            startIcon={<EditIcon />}
+            onClick={() => navigate("/me/edit-my-profile")}
+          >
+            Cập nhật hồ sơ
+          </Button>
+          <Button
+            size="small"
+            startIcon={<LockIcon />}
+            onClick={() => navigate("/me/change-password")}
+          >
+            Đổi mật khẩu
+          </Button>
+
+        </ButtonGroup>
+      </Box>
     </Box>
   );
 }
