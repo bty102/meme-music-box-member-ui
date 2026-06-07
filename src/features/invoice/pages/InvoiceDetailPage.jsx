@@ -24,6 +24,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getInvoiceDetailApi, getProductsOfInvoiceApi, getRoomsOfInvoiceApi} from "../services/invoiceApi";
 import { formatDateTime } from "../../../util/formatDateTime";
+import VNPayButton from "../../payment/components/VNPayButton";
 
 
 function InvoiceDetailPage() {
@@ -702,6 +703,10 @@ function InvoiceDetailPage() {
                         Xác nhận đã thanh toán
                     </Button>
                     )} */}
+                    {
+                        invoice?.status === "UNPAID" &&
+                        <VNPayButton invoiceCode={invoice?.invoiceCode} />
+                    }
                 </ButtonGroup>            
             </Box>
         </Box>
