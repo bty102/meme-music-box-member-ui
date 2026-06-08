@@ -131,7 +131,7 @@ function ProductListPage() {
         />
 
         <Box>
-          <Typography variant="h4" fontWeight={700}>
+          <Typography variant="h4" fontWeight={700} sx={{fontWeight: 700}}>
             Mặt hàng
           </Typography>
 
@@ -303,7 +303,7 @@ function ProductListPage() {
                   />
                 </Box>
 
-                <Typography variant="h6" fontWeight={700}>
+                <Typography variant="h6" fontWeight={700} sx={{fontWeight: 700}}>
                   {product.productName}
                 </Typography>
 
@@ -319,7 +319,7 @@ function ProductListPage() {
                 <Stack spacing={1}>
                   <Typography>Đơn vị: {product.unit}</Typography>
 
-                  <Typography>Tồn kho: {product.stockQuantity}</Typography>
+                  {/* <Typography>Tồn kho: {product.stockQuantity}</Typography> */}
 
                   <Box
                     sx={{
@@ -332,7 +332,7 @@ function ProductListPage() {
                   >
                     <AttachMoneyIcon color="success" fontSize="small" />
 
-                    <Typography color="success.main" fontWeight={700}>
+                    <Typography color="success.main" fontWeight={700} sx={{fontWeight: 700}}>
                       {product.unitPrice.toLocaleString("vi-VN")}đ
                     </Typography>
                   </Box>
